@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru" class="form-page inner-page">
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+  content="Личный проект «Седона», выполненый в рамках пройденного онлайн-курса «Продвинутый   HTML и CSS» от     HTML Academy" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+  <title>Седона</title>
+
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Для современных браузеров -->
+  <link href="favicon.svg" rel="icon" sizes="any" type="image/svg+xml">
+  <!-- Для Apple Touch -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Для Android и будущих программ -->
+  <link rel="manifest" href="site.webmanifest">
+
+  <meta name="theme-color" content="#a8c0d7">
+
+  <meta name="apple-mobile-web-app-status-bar-style" content="#a8c0d7">
+  <!-- preload fonts -->
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin>
+
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="page">
+  <header class="page__header">
+
+    <nav class="main-nav main-nav--closed">
+      <button type="button" class="main-nav__toggle">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a href="index.html" class="main-nav__link">Главная</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="photo.html" class="main-nav__link">Фото и видео</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link main-nav__link--current">Форма отзыва</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#" class="main-nav__link">HTML Academy </a>
+        </li>
+      </ul>
+
+      <a href="index.html" class="main-nav__logo">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img class="main-nav__logo-img" src="img/logo-sedona-mobile.svg" width="102" alt="Логотип «Седона»">
+        </picture>
+      </a>
+    </nav>
+
+    <div class="hero-header">
+      <img src="img/text-sedona.svg" width="282" alt="welcome to sedona" class="hero-header__img">
+    </div>
+
+  </header>
+  <main class="page__main">
+    <h1 class="title main-header title--large main-header--inner">Оставьте свой отзыв</h1>
+    <p class="section-lead">Помогите нашим отелям стать лучше! оставьте отзыв о них, <br>а также о посещенных вами достопримечательностях</p>
+    <form action="#" method="post" class="feedback">
+      <div class="feedback__section feedback__section--fullname" role="group" aria-labelledby="fullname">
+        <div class="title feedback__title feedback__title--half-width" id="fullname">Представьтесь:</div>
+        <p class="feedback__input-group feedback__input-group--full-name">
+          <label for="name" class="feedback__label">Имя<abbr title="required">*</abbr>:</label>
+          <input id="name" type="text" class="feedback__input" name="name" placeholder="Петр" required autocomplete="off">
+        </p>
+        <p class="feedback__input-group feedback__input-group--full-name">
+          <label for="surname" class="feedback__label">Фамилия<abbr title="required">*</abbr>:</label>
+          <input id="surname" type="text" class="feedback__input" name="surname" placeholder="Иванов" required autocomplete="off">
+        </p>
+        <p class="feedback__input-group feedback__input-group--full-name">
+          <label for="middlename" class="feedback__label">Отчество:</label>
+          <input id="middlename" type="text" class="feedback__input" name="middlename" placeholder="Александрович" autocomplete="off">
+        </p>
+      </div>
+      <div class="feedback__section feedback__section--contacts" role="group" aria-labelledby="contacts">
+        <div class="title feedback__title feedback__title--contacts" id="contacts">Контактная информация:</div>
+        <p class="feedback__input-group feedback__input-group--contacts feedback__input-group--phone">
+          <label for="phone" class="feedback__label feedback__label--contacts">
+            <span>Контактный</span> телефон<abbr title="required">*</abbr>:
+          </label>
+          <input id="phone" type="tel" class="feedback__input feedback__input--contacts" name="phone" placeholder="Введите телефон" required autocomplete="off">
+        </p>
+        <p class="feedback__input-group feedback__input-group--contacts feedback__input-group--email">
+          <label for="email" class="feedback__label feedback__label--contacts">
+            Электронная почта<abbr title="required">*</abbr>:
+          </label>
+          <input id="email" type="email" class="feedback__input feedback__input--contacts" name="email" placeholder="Введите e-mail" required autocomplete="off">
+        </p>
+      </div>
+      <div class="feedback__section feedback__section--impression" role="group" aria-labelledby="impression">
+        <div class="title feedback__title feedback__title--half-width feedback__title--impression" id="impression">Ваше Общее впечатление:</div>
+        <ul class="feedback__box-list feedback__box-list--impression">
+          <li class="feedback__box-item">
+            <label for="impression-good" class="feedback__box-label">
+              <input type="radio" class="visually-hidden feedback__radio" name="impression" value="good" id="impression-good" checked>
+              <span class="feedback__box-indicator feedback__box-indicator--radio"></span>
+              <p class="feedback__box-text">Скорее положительное</p>
+            </label>
+          </li>
+          <li class="feedback__box-item">
+            <label for="impression-bad" class="feedback__box-label">
+              <input type="radio" class="visually-hidden feedback__radio" name="impression" value="bad" id="impression-bad">
+              <span class="feedback__box-indicator feedback__box-indicator--radio"></span>
+              <p class="feedback__box-text">Скорее отрицательное</p>
+            </label>
+          </li>
+          <li class="feedback__box-item">
+            <label for="impression-unknown" class="feedback__box-label">
+              <input type="radio" class="visually-hidden feedback__radio" name="impression" value="unknown" id="impression-unknown">
+              <span class="feedback__box-indicator feedback__box-indicator--radio"></span>
+              <p class="feedback__box-text">Затрудняюсь ответить</p>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="feedback__section feedback__section--attractions" role="group" aria-labelledby="attractions">
+        <div class="title feedback__title feedback__title--attractions" id="attractions">посещенные <br>достопримечательности:</div>
+        <ul class="feedback__box-list feedback__box-list--attractions">
+          <li class="feedback__box-item feedback__box-item--checkbox">
+            <label for="devil" class="feedback__box-label">
+              <input type="checkbox" class="visually-hidden feedback__checkbox" name="devil" id="devil" checked>
+              <span class="feedback__box-indicator feedback__box-indicator--checkbox"></span>
+              <p class="feedback__box-text">Мост Дьявола</p>
+            </label>
+          </li>
+          <li class="feedback__box-item feedback__box-item--checkbox">
+            <label for="mountain" class="feedback__box-label">
+              <input type="checkbox" class="visually-hidden feedback__checkbox" name="mountain" id="mountain" checked>
+              <span class="feedback__box-indicator feedback__box-indicator--checkbox"></span>
+              <p class="feedback__box-text">Гора-Колокол</p>
+            </label>
+          </li>
+          <li class="feedback__box-item feedback__box-item--checkbox">
+            <label for="park" class="feedback__box-label">
+              <input type="checkbox" class="visually-hidden feedback__checkbox" name="park" id="park" checked>
+              <span class="feedback__box-indicator feedback__box-indicator--checkbox"></span>
+              <p class="feedback__box-text">Слайд-парк</p>
+            </label>
+          </li>
+          <li class="feedback__box-item feedback__box-item--checkbox">
+            <label for="rocks" class="feedback__box-label">
+              <input type="checkbox" class="visually-hidden feedback__checkbox" name="rocks" id="rocks">
+              <span class="feedback__box-indicator feedback__box-indicator--checkbox"></span>
+              <p class="feedback__box-text">Красные скалы</p>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <p class="feedback__section feedback__section--textarea">
+        <label class="title feedback__title feedback__title--textarea" for="emotions">Опишите свои эмоции:</label>
+        <textarea name="emotions" id="emotions" class="feedback__textarea"
+        placeholder="Опишите подробно все свои восторги"></textarea>
+      </p>
+      <div class="feedback__footer">
+        <button type="submit" class="btn feedback__btn">ОТПРАВИТЬ ОТЗЫВ</button>
+        <strong class="feedback__required-note"><abbr title="require">*</abbr> — обязательные поля</strong>
+      </div>
+    </form>
+  </main>
+  <footer class="page__footer page__footer--inner">
+    <p class="hashtag title title--large">#visitSEDONA</p>
+    <ul class="social">
+      <li class="social__item">
+        <a href="#" class="social__link">
+          <svg class="social__icon" aria-hidden="true" focusable="false" width="18" height="15">
+            <use xlink:href="img/sprite.svg#icon-twitter"></use>
+          </svg>
+          <span class="visually-hidden">Твиттер</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__link">
+          <svg class="social__icon" aria-hidden="true" focusable="false" width="9" height="19">
+            <use xlink:href="img/sprite.svg#icon-facebook"></use>
+          </svg>
+          <span class="visually-hidden">Фейсбук</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a href="#" class="social__link">
+          <svg class="social__icon" aria-hidden="true" focusable="false" width="20" height="14">
+            <use xlink:href="img/sprite.svg#icon-youtube"></use>
+          </svg>
+          <span class="visually-hidden">Ютуб</span>
+        </a>
+      </li>
+    </ul>
+    <p class="copyright">
+      <span class="copyright__text">Разработано</span>
+      <svg class="copyright__img" aria-hidden="true" focusable="false" viewBox="0 0 26.943 34.09" width="27" height="34"><path d="M13.62.017L13.472 0 0 1.412v24.661l13.473 8.017 13.43-7.99.042-.025V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.548-1.212L25.02 3.147v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.014 1.415 5.904 3.513-.86.507-5.03-2.992-.014 1.415 3.827 2.275-.782.523-3.031-1.787-.014 1.413 1.853 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.016 1.044-7.942-4.728-.015 1.416 7.979 4.795.018 1.076-7.973-4.74-.013 1.414 8.021 4.822.046.025 8.143-4.872-.011-5.177 3.415-2.036v10.021L13.472 31.85 1.925 24.979v-9.852z"/></svg>
+    </div>
+  </p>
+</footer>
+<script src="js/index.js"></script>
+</body>
+</html>
